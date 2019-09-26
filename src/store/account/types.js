@@ -1,0 +1,6 @@
+export const RECEIVE = 'account/RECEIVE'
+export const UPDATE = 'account/UPDATE'
+export const RESET = 'account/RESET'
+export const LOADING = 'account/LOADING'
+export const ERROR = 'account/ERROR'
+export const CLEAR_ERROR = 'account/CLEAR_ERROR'

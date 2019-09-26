@@ -1,0 +1,114 @@
+image: hugogrochau/mutualci
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - publish
+  - build:ios
+  - build:android
+
+# TEST
+
+# First stage. Lint and tests need to pass to continue with the rest of the pipeline
+test:
+  stage: test
+  except:
+    - tags
+  script:
+    - npm --version
+    - node --version
+    - expo --version
+    - npm install --no-audit
+    - npm run lint
+    - npm run test
+
+# PUBLISH
+
+# Publish configuration common to all envs
+.publish:
+  stage: publish
+  script:
+    - expo login --username $EXPO_USERNAME --password $EXPO_PASSWORD --non-interactive &
+    - sleep 5
+    - npm install --no-audit
+    - export VERSION=$(jq -r '.version' package.json)
+    - export ANDROID_VERSION_CODE=$(node scripts/androidVersionCode.js $VERSION)
+    - envsubst < app.env.json > app.json
+    - envsubst < config.env.json > config.json
+    - expo publish --non-interactive --release-channel $MUTUAL_ENVIRONMENT
+  artifacts:
+    paths:
+      - config.json
+      - app.json
+
+# Publish configuration specific to dev
+publish:dev:
+  extends: .publish
+  only:
+    - dev
+  before_script:
+    - export MUTUAL_NAME=$DEV_MUTUAL_NAME
+    - export MUTUAL_DESCRIPTION=$DEV_MUTUAL_DESCRIPTION
+    - export MUTUAL_SLUG=$DEV_MUTUAL_SLUG
+    - export MUTUAL_API_URL=$DEV_MUTUAL_API_URL
+    - export MUTUAL_API_GW_URL=$DEV_MUTUAL_API_GW_URL
+    - export MUTUAL_IMAGE_HOST=$DEV_MUTUAL_IMAGE_HOST
+    - export MUTUAL_ENVIRONMENT=dev
+
+# Publish configuration specific to alpha
+publish:alpha:
+  extends: .publish
+  only:
+    - alpha
+  before_script:
+    - export MUTUAL_NAME=$ALPHA_MUTUAL_NAME
+    - export MUTUAL_DESCRIPTION=$ALPHA_MUTUAL_DESCRIPTION
+    - export MUTUAL_SLUG=$ALPHA_MUTUAL_SLUG
+    - export MUTUAL_API_URL=$ALPHA_MUTUAL_API_URL
+    - export MUTUAL_API_GW_URL=$ALPHA_MUTUAL_API_GW_URL
+    - export MUTUAL_IMAGE_HOST=$ALPHA_MUTUAL_IMAGE_HOST
+    - export MUTUAL_ENVIRONMENT=alpha
+
+# Publish configuration specific to production
+publish:production:
+  extends: .publish
+  only:
+    - master
+  when: manual
+  allow_failure: false
+  before_script:
+    - export MUTUAL_ENVIRONMENT=production
+
+# BUILD
+
+# Build configuration common to all platforms
+.before:build:
+  only:
+    - master
+  before_script:
+    - export MUTUAL_ENVIRONMENT=production
+    - expo login --username $EXPO_USERNAME --password $EXPO_PASSWORD --non-interactive &
+    - sleep 5
+    - npm install --no-audit
+    - export VERSION=$(jq -r '.version' package.json)
+    - export ANDROID_VERSION_CODE=$(node scripts/androidVersionCode.js $VERSION)
+    - envsubst < app.env.json > app.json
+    - envsubst < config.env.json > config.json
+
+# Build configuration specific to ios
+build:ios:
+  stage: build:ios
+  extends: .before:build
+  script:
+    - expo build:ios --no-publish --non-interactive --release-channel $MUTUAL_ENVIRONMENT
+
+# Build configuration specific to android
+build:android:
+  stage: build:android
+  extends: .before:build
+  script:
+    - expo build:android --no-publish --non-interactive --release-channel $MUTUAL_ENVIRONMENT

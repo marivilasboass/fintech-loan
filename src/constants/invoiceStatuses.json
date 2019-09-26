@@ -1,0 +1,33 @@
+{
+    "pending": {
+      "name": "Pendente"
+    },
+    "paid": {
+      "name": "Fatura paga"
+    },
+    "canceled": {
+      "name": "Cobrança cancelada"
+    },
+    "draft": {
+      "name": "Rascunho"
+    },
+    "partially_paid": {
+      "name": "Parcialmente pago"
+    },
+    "refunded": {
+      "name": "Fatura reembolsada"
+    },
+    "expired": {
+      "name": "Fatura expirada"
+    },
+    "in_protest": {
+        "name": "Em protesto"
+    },
+    "chargeback": {
+        "name": "Protesto reembolsado"
+    },
+    "in_analysis": {
+        "name": "Em análise"
+    }
+
+  }

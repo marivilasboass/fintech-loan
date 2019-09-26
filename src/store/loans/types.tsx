@@ -1,0 +1,8 @@
+export const RECEIVE = 'loans/RECEIVE'
+export const UPDATE = 'loans/UPDATE'
+export const REMOVE = 'loans/REMOVE'
+export const LOADING = 'loans/LOADING'
+export const UPDATE_FILTERS = 'loans/UPDATE_FILTERS'
+export const RESET_FILTERS = 'loans/RESET_FILTERS'
+export const ERROR = 'loans/ERROR'
+export const UPDATE_PROFILE_PICTURE = 'loans/UPDATE_PROFILE_PICTURE'

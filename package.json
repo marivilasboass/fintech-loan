@@ -1,0 +1,129 @@
+{
+  "name": "mutual",
+  "version": "4.1.4",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=4096 expo start --offline",
+    "test": "jest",
+    "tsc": "tsc",
+    "tsc:check": "tsc --checkJs",
+    "tsc:watch": "tsc --watch",
+    "test:watch": "jest --watch",
+    "lint": "eslint src index.js",
+    "prestorybook": "rnstl",
+    "storybook": "cross-env STORYBOOK_ONLY=true NODE_OPTIONS=--max_old_space_size=4096 npm run start",
+    "libphonenumber-metadata": "libphonenumber-generate-metadata metadata.mobile.json --countries BR --types mobile"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "\\.js$": "<rootDir>/scripts/jest.preprocessor.js"
+    }
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^9.0.0",
+    "@fnando/cnpj": "^0.1.1",
+    "@fnando/cpf": "^0.1.1",
+    "@ptomasroos/react-native-multi-slider": "^1.0.0",
+    "@storybook/addon-knobs": "^4.1.7",
+    "@storybook/addon-ondevice-knobs": "^4.1.7",
+    "@storybook/addons": "^4.1.7",
+    "@storybook/react-native": "^4.1.7",
+    "art": "^0.10.3",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "d3": "^5.9.1",
+    "d3-scale": "^2.2.2",
+    "d3-shape": "^1.3.4",
+    "expo": "^32.0.0",
+    "fuse.js": "^3.3.0",
+    "humps": "^2.0.1",
+    "jwt-decode": "^2.2.0",
+    "libphonenumber-js": "^0.4.52",
+    "lodash.debounce": "^4.0.8",
+    "mathjs": "^5.2.3",
+    "md5": "^2.2.1",
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
+    "normalizr": "^3.2.4",
+    "numeral": "^2.0.6",
+    "qs": "^6.6.0",
+    "ramda": "^0.25.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-branch": "^3.0.1",
+    "react-native-circular-progress": "^1.0.1",
+    "react-native-collapsible": "^0.10.0",
+    "react-native-elements": "^0.18.5",
+    "react-native-keyboard-aware-scroll-view": "^0.4.1",
+    "react-native-markdown-renderer": "^3.2.1",
+    "react-native-masked-text": "^1.9.2",
+    "react-native-modal": "^6.4.0",
+    "react-native-modal-selector": "^0.0.27",
+    "react-native-shadow": "^1.2.2",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-svg-charts": "^5.2.0",
+    "react-native-swipe-list-view": "^2.0.0",
+    "react-native-swiper": "^1.5.13",
+    "react-navigation": "^1.5.11",
+    "react-redux": "^5.0.6",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.4.0",
+    "redux-thunk": "^2.2.0",
+    "sentry-expo": "^1.11.1",
+    "string.prototype.padstart": "^3.0.0",
+    "typescript": "^3.5.2",
+    "validator": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.22",
+    "@types/react-native": "^0.57.63",
+    "@types/redux-persist": "^4.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-module-resolver": "^3.1.3",
+    "babel-preset-expo": "^5.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-ramda": "^2.3.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.6.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "expo-cli": "^2.15.3",
+    "husky": "^1.3.1",
+    "jest-expo": "^32.0.0",
+    "jest-fetch-mock": "^2.1.0",
+    "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.8.6",
+    "react-native-storybook-loader": "^1.8.0",
+    "react-test-renderer": "^16.8.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tsc && lint-staged"
+    }
+  }
+}

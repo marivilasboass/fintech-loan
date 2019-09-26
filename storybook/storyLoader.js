@@ -1,0 +1,119 @@
+// Auto-generated file created by react-native-storybook-loader
+// Do not edit.
+//
+// https://github.com/elderfo/react-native-storybook-loader.git
+
+function loadStories() {
+  require('../src/views/Intro/views/InvestorOnboarding/InvestorOnboarding.stories');
+  require('../src/views/Intro/views/InvestorOnboarding/views/InvestorOnboardingTutorial/InvestorOnboardingTutorial.stories');
+  require('../src/components/LoanInstallmentCarousel/LoanInstallmentCarousel.stories');
+  require('../src/newUI/InstallmentsProgressBar/InstallmentsProgressBar.stories');
+  require('../src/newUI/Placeholder/Placeholder.stories');
+  require('../src/components/AdvancedFilter/views/Filter/Filter.stories');
+  require('../src/components/AdvancedFilter/views/LoanMotives/LoanMotivesScreen.stories');
+  require('../src/components/AdvancedFilter/components/HeaderComponent/HeaderComponent.stories');
+  require('../src/components/AnimatedProgressBar/AnimatedProgressBar.stories');
+  require('../src/components/Carousel/Carousel.stories');
+  require('../src/components/DoughnutChart/DoughnutChart.stories');
+  require('../src/components/LineChart/LineChart.stories');
+  require('../src/components/Location/Location.stories');
+  require('../src/components/ScoreButton/ScoreButton.stories');
+  require('../src/components/ScoreChart/ScoreChart.stories');
+  require('../src/components/Summary/Summary.stories');
+  require('../src/components/TakePicture/TakePicture.stories');
+  require('../src/components/ViewWithHeaderAndButton/ViewWithHeaderAndButton.stories');
+  require('../src/newUI/Alert/Alert.stories');
+  require('../src/newUI/AvatarProgress/AvatarProgress.stories');
+  require('../src/newUI/BottomSheet/BottomSheet.stories');
+  require('../src/newUI/Button/Button.stories');
+  require('../src/newUI/Checkbox/Checkbox.stories');
+  require('../src/newUI/Chip/Chip.stories');
+  require('../src/newUI/Circle/Circle.stories');
+  require('../src/newUI/CountdownButton/CountdownButton.stories');
+  require('../src/newUI/DoubleSlider/DoubleSlider.stories');
+  require('../src/newUI/FastSelector/FastSelector.stories');
+  require('../src/newUI/Input/Input.stories');
+  require('../src/newUI/Message/Message.stories');
+  require('../src/newUI/Password/Password.stories');
+  require('../src/newUI/RadioGroup/RadioGroup.stories');
+  require('../src/newUI/ScoreCheckbox/ScoreCheckbox.stories');
+  require('../src/newUI/SearchList/SearchList.stories');
+  require('../src/newUI/Selector/Selector.stories');
+  require('../src/newUI/Shadow/Shadow.stories');
+  require('../src/newUI/Switcher/Switcher.stories');
+  require('../src/newUI/Terms/Terms.stories');
+  require('../src/newUI/Text/Text.stories');
+  require('../src/newUI/Typography/Typography.stories');
+  require('../src/views/Main/components/Banners/Banners.stories');
+  require('../src/views/Main/views/Investment/InvestmentDetail.stories');
+  require('../src/views/Main/views/InvestmentTutorial/InvestmentTutorial.stories');
+  require('../src/views/Main/views/LoanTutorial/LoanTutorial.stories');
+  require('../src/views/Main/views/Pendencies/Pendencies.stories');
+  require('../src/views/Main/views/Pendencies/views/Address/Address.stories');
+  require('../src/views/Main/views/Pendencies/views/Identification/Identification.stories');
+  require('../src/views/Main/views/Pendencies/views/Identification/components/DocumentModalTips.stories');
+  require('../src/views/Main/views/Pendencies/views/PendenciesStatus/components/AnalysisModal/AnalysisModal.stories');
+  require('../src/components/Questionnaire/Questions/Questions.stories');
+  require('../src/views/Main/views/RequestLoan/views/ToKnowYouBetter/ToKnowYouBetter.stories');
+
+}
+
+const stories = [
+  '../src/views/Main/views/InvestorOnboarding/InvestorOnboarding.stories',
+  '../src/views/Main/views/InvestorOnboarding/InvestorOnboardingTutorial/InvestorOnboardingTutorial.stories',
+  '../src/components/LoanInstallmentCarousel/LoanInstallmentCarousel.stories',
+  '../src/newUI/InstallmentsProgressBar/InstallmentsProgressBar.stories',
+  '../src/newUI/Placeholder/Placeholder.stories',
+  '../src/components/AdvancedFilter/views/Filter/Filter.stories',
+  '../src/components/AdvancedFilter/views/LoanMotives/LoanMotivesScreen.stories',
+  '../src/components/AdvancedFilter/components/HeaderComponent/HeaderComponent.stories',
+  '../src/components/AnimatedProgressBar/AnimatedProgressBar.stories',
+  '../src/components/Carousel/Carousel.stories',
+  '../src/components/DoughnutChart/DoughnutChart.stories',
+  '../src/components/LineChart/LineChart.stories',
+  '../src/components/Location/Location.stories',
+  '../src/components/ScoreButton/ScoreButton.stories',
+  '../src/components/ScoreChart/ScoreChart.stories',
+  '../src/components/Summary/Summary.stories',
+  '../src/components/TakePicture/TakePicture.stories',
+  '../src/components/ViewWithHeaderAndButton/ViewWithHeaderAndButton.stories',
+  '../src/newUI/Alert/Alert.stories',
+  '../src/newUI/AvatarProgress/AvatarProgress.stories',
+  '../src/newUI/BottomSheet/BottomSheet.stories',
+  '../src/newUI/Button/Button.stories',
+  '../src/newUI/Checkbox/Checkbox.stories',
+  '../src/newUI/Chip/Chip.stories',
+  '../src/newUI/Circle/Circle.stories',
+  '../src/newUI/CountdownButton/CountdownButton.stories',
+  '../src/newUI/DoubleSlider/DoubleSlider.stories',
+  '../src/newUI/FastSelector/FastSelector.stories',
+  '../src/newUI/Input/Input.stories',
+  '../src/newUI/Message/Message.stories',
+  '../src/newUI/Password/Password.stories',
+  '../src/newUI/RadioGroup/RadioGroup.stories',
+  '../src/newUI/ScoreCheckbox/ScoreCheckbox.stories',
+  '../src/newUI/SearchList/SearchList.stories',
+  '../src/newUI/Selector/Selector.stories',
+  '../src/newUI/Shadow/Shadow.stories',
+  '../src/newUI/Switcher/Switcher.stories',
+  '../src/newUI/Terms/Terms.stories',
+  '../src/newUI/Text/Text.stories',
+  '../src/newUI/Typography/Typography.stories',
+  '../src/views/Main/components/Banners/Banners.stories',
+  '../src/views/Main/views/Investment/InvestmentDetail.stories',
+  '../src/views/Main/views/InvestmentTutorial/InvestmentTutorial.stories',
+  '../src/views/Main/views/LoanTutorial/LoanTutorial.stories',
+  '../src/views/Main/views/Pendencies/Pendencies.stories',
+  '../src/views/Main/views/Pendencies/views/Address/Address.stories',
+  '../src/views/Main/views/Pendencies/views/Identification/Identification.stories',
+  '../src/views/Main/views/Pendencies/views/Identification/components/DocumentModalTips.stories',
+  '../src/views/Main/views/Pendencies/views/PendenciesStatus/components/AnalysisModal/AnalysisModal.stories',
+  '../src/components/Questionnaire/Questions/Questions.stories',
+  '../src/views/Main/views/RequestLoan/views/ToKnowYouBetter/ToKnowYouBetter.stories',
+
+];
+
+module.exports = {
+  loadStories,
+  stories,
+};

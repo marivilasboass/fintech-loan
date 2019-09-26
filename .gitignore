@@ -1,0 +1,10 @@
+.vscode/
+config.json
+node_modules/
+.expo/
+secrets
+npm-debug.*
+/test
+.idea
+*.log
+.DS_Store

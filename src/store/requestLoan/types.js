@@ -1,0 +1,6 @@
+export const UPDATE = 'requestLoan/UPDATE'
+export const RESET_TIMER = 'requestLoan/RESET_TIMER'
+export const LOADING = 'requestLoan/LOADING'
+export const CLEAR = 'requestLoan/CLEAR'
+export const CLEAR_OPTIONS = 'requestLoan/CLEAR_OPTIONS'
+export const OPTIONS = 'requestLoan/OPTIONS'

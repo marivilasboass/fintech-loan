@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Mutual Local",
+    "description": "Solicite empréstimos e pague juros para seus amigos",
+    "slug": "mutuallocal",
+    "scheme": "mutualclub",
+    "sdkVersion": "32.0.0",
+    "version": "4.1.4",
+    "orientation": "portrait",
+    "primaryColor": "#F6F6F6",
+    "androidStatusBarColor": "#000000",
+    "icon": "./assets/icons/app-icon.png",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "notification": {
+      "icon": "./assets/icons/push-notification-icon.png",
+      "color": "#FF0048"
+    },
+    "splash": {
+      "image": "./assets/images/splashscreen.png",
+      "backgroundColor": "#FFFFFF",
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.mutualr.com.mutual",
+      "buildNumber": "4.1.4",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos da sua permissão para acessar sua câmera. É necessário uma Selfie para aprovar seu cadastro.",
+        "NSLocationAlwaysUsageDescription": "Precisamos da sua localização. Por segurança, é necessário para solicitar empréstimo ou investir.",
+        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização. Por segurança, é necessário para solicitar empréstimo ou investir.",
+        "NSPhotoLibraryAddUsageDescription": "Precisamos da sua permissão para usar a biblioteca de imagens para alterar sua foto de perfil.",
+        "NSPhotoLibraryUsageDescription": "Precisamos da sua permissão para usar a biblioteca de imagens para alterar sua foto de perfil."
+      },
+      "icon": "./assets/icons/app-icon-ios.png",
+      "splash": {
+        "image": "./assets/images/splashscreen.png",
+        "backgroundColor": "#FFFFFF",
+        "resizeMode": "contain"
+      }
+    },
+    "android": {
+      "package": "com.mutual.app",
+      "versionCode": 4001004,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "READ_INTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "NOTIFICATIONS"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "splash": {
+        "backgroundColor": "#FFFFFF",
+        "resizeMode": "contain",
+        "ldpi": "./assets/images/splashscreen-mdpi.png",
+        "mdpi": "./assets/images/splashscreen-mdpi.png",
+        "hdpi": "./assets/images/splashscreen-hdpi.png",
+        "xhdpi": "./assets/images/splashscreen-xhdpi.png",
+        "xxhdpi": "./assets/images/splashscreen-xxhdpi.png",
+        "xxxhdpi": "./assets/images/splashscreen-xxxhdpi.png"
+      }
+    }
+  }
+}

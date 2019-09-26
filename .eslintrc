@@ -1,0 +1,44 @@
+{
+  "env": {
+    "es6": true,
+    "jest": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:ramda/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-native",
+    "ramda"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "object-curly-spacing": ["error", "always"],
+    "no-console": ["error", { "allow": ["warn"] }],
+    "object-shorthand": ["error"],
+    "quote-props": ["error", "as-needed"],
+    "indent": ["error", 2, { "flatTernaryExpressions": true }],
+    "prefer-const": ["error"],
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+    }],
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2
+    // "react-native/no-inline-styles": 2
+  },
+  "parser": "babel-eslint",
+  "globals": {
+    "fetch": false,
+    "XMLHttpRequest": false,
+    "__DEV__": false
+  }
+}
