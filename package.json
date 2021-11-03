@@ -88,7 +88,7 @@
     "sentry-expo": "^1.11.1",
     "string.prototype.padstart": "^3.0.0",
     "typescript": "^3.5.2",
-    "validator": "^9.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
